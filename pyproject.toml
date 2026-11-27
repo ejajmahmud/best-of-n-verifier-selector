@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "best-of-n-verifier-selector"
+version = "0.1.0"
+description = "Evaluates N candidate agent patches against deterministic test/lint/diff-size verifiers to select the cleanest passing minimal patch"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+best-of-n-verifier-selector = "best_of_n_verifier_selector.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["best_of_n_verifier_selector*"]
